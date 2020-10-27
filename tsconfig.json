@@ -20,7 +20,20 @@
     "noEmit": true,
     "jsx": "react"
   },
+  // "include": [
+  //   "src"
+  // ]
   "include": [
-    "src"
-  ]
+    "src",
+    "./src/**/*.ts"
+  ],
 }
+// https://threejs.org/docs/#manual/en/introduction/Typescript-setup
+// Example of minimal `tsconfig.json` file
+// {
+// 	"compilerOptions": {
+// 		"target": "es6",
+// 		"moduleResolution": "node",
+// 	},
+// 	"include": [ "./src/**/*.ts" ],
+// }

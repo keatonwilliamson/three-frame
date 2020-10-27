@@ -1,0 +1,37 @@
+.root {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    canvas {
+      // background: url("./../ocean.svg");
+      // background: url('./triangles.svg');
+      // background-attachment: #44382a;
+      background-image: radial-gradient(farthest-corner at 60% 45%, #646267 0%, #44382a 60%, #1b1611 100%);
+      background-repeat: none;
+      background-size: cover;
+      background-position: center;
+    }
+  
+    .loading {
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url('./../blue-triangle.svg');
+      background-repeat: none;
+      background-size: cover;
+      background-position: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      & p {
+        color: white;
+        font-size: 48px;
+        font-weight: 600;
+        transform: translateY(-60px);
+      }
+    }
+  }
+  

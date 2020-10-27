@@ -1,26 +1,39 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import { ThreeFrame } from './ThreeFrame/ThreeFrame';
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className={styles.App}>
+        <Switch>
+          <Route exact path="/">
+          </Route>
+          <Route path="/move-points-along-normals">
+            <ThreeFrame modelPaths={[
+              "https://vex-assets.s3.amazonaws.com/MovePointsAlongNormalAvocados.glb",
+              // "https://bmp-assets.s3.amazonaws.com/leftBaseGrass.glb",
+              // "https://bmp-assets.s3.amazonaws.com/shrubFrontLeft.glb",
+              // "https://bmp-assets.s3.amazonaws.com/shrubBackLeft.glb",
+              // "https://bmp-assets.s3.amazonaws.com/tree2.glb",
+              // "https://bmp-assets.s3.amazonaws.com/tree1.glb",
+            ]} 
+            HDRI="https://vex-assets.s3.amazonaws.com/quattro_canti.jpg"
+            // HDRI=""
+            ></ThreeFrame>
+          </Route>
+          <Route path="/dog"><>
+            <ThreeFrame modelPaths={[""]} HDRI=""></ThreeFrame>
+          </>
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
-
-export default App;
