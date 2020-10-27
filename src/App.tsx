@@ -17,7 +17,7 @@ export default function App() {
           </Route>
           <Route path="/move-points-along-normals">
             <ThreeFrame modelPaths={[
-              "https://vex-assets.s3.amazonaws.com/MovePointsAlongNormalAvocados.glb",
+              "https://vex-assets.s3.amazonaws.com/MovePointsAlongNormalsAvocados.glb",
               // "https://bmp-assets.s3.amazonaws.com/leftBaseGrass.glb",
               // "https://bmp-assets.s3.amazonaws.com/shrubFrontLeft.glb",
               // "https://bmp-assets.s3.amazonaws.com/shrubBackLeft.glb",
